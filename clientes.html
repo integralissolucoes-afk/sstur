@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Clientes</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+  <div><strong>Sistema de Transporte</strong></div>
+  <nav>
+    <a href="index.html">Dashboard</a>
+    <a href="clientes.html">Clientes</a>
+    <a href="veiculos.html">Veículos</a>
+    <a href="agendamentos.html">Agendamentos</a>
+    <a href="contratos.html">Contratos</a>
+    <a href="config.html">Contrato padrão</a>
+    <a href="#" onclick="logout()">Sair</a>
+  </nav>
+</header>
+  <div class="container">
+    <div class="card">
+      <h1>Novo cliente</h1>
+      <form id="clienteForm" class="grid grid-2">
+        <div><label>Nome</label><input id="nome" required /></div>
+        <div><label>CPF/CNPJ</label><input id="cpf_cnpj" /></div>
+        <div><label>Telefone</label><input id="telefone" /></div>
+        <div><label>Email</label><input id="email" /></div>
+        <div><label>Endereço</label><input id="endereco" /></div>
+        <div><label>Observações</label><input id="observacoes" /></div>
+        <div><button type="submit">Salvar cliente</button></div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Lista de clientes</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Nome</th>
+            <th>Documento</th>
+            <th>Telefone</th>
+            <th>Email</th>
+          </tr>
+        </thead>
+        <tbody id="tbClientes"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/clientes.js"></script>
+</body>
+</html>

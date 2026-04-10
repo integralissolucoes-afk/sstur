@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+  <div><strong>Sistema de Transporte</strong></div>
+  <nav>
+    <a href="index.html">Dashboard</a>
+    <a href="clientes.html">Clientes</a>
+    <a href="veiculos.html">Veículos</a>
+    <a href="agendamentos.html">Agendamentos</a>
+    <a href="contratos.html">Contratos</a>
+    <a href="config.html">Contrato padrão</a>
+    <a href="#" onclick="logout()">Sair</a>
+  </nav>
+</header>
+  <div class="container">
+    <div class="grid grid-3">
+      <div class="card"><div>Clientes</div><div class="metric" id="mClientes">0</div></div>
+      <div class="card"><div>Veículos</div><div class="metric" id="mVeiculos">0</div></div>
+      <div class="card"><div>Agendamentos</div><div class="metric" id="mAgendamentos">0</div></div>
+    </div>
+
+    <div class="card">
+      <h2>Agendamentos recentes</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th>Veículo</th>
+            <th>Saída</th>
+            <th>Destino</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="tbRecentes"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/dashboard.js"></script>
+</body>
+</html>

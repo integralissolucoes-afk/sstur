@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contrato padrão</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+  <div><strong>Sistema de Transporte</strong></div>
+  <nav>
+    <a href="index.html">Dashboard</a>
+    <a href="clientes.html">Clientes</a>
+    <a href="veiculos.html">Veículos</a>
+    <a href="agendamentos.html">Agendamentos</a>
+    <a href="contratos.html">Contratos</a>
+    <a href="config.html">Contrato padrão</a>
+    <a href="#" onclick="logout()">Sair</a>
+  </nav>
+</header>
+  <div class="container">
+    <div class="card">
+      <h1>Modelo de contrato</h1>
+      <small class="muted">Variáveis disponíveis: {{numero_contrato}}, {{cliente_nome}}, {{cliente_documento}}, {{cliente_endereco}}, {{cliente_telefone}}, {{local_saida}}, {{data_saida}}, {{hora_saida}}, {{destino}}, {{local_retorno}}, {{data_retorno}}, {{hora_retorno}}, {{quantidade_passageiros}}, {{veiculo_nome}}, {{veiculo_placa}}, {{veiculo_capacidade}}, {{valor_total}}, {{forma_pagamento}}, {{observacoes}}, {{foro_cidade}}, {{cidade_assinatura}}, {{data_emissao}}, {{empresa_nome}}, {{empresa_documento}}, {{empresa_endereco}}, {{empresa_telefone}}</small>
+      <textarea id="conteudo" style="min-height: 500px"></textarea>
+      <button id="btnSalvar">Salvar modelo</button>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/config.js"></script>
+</body>
+</html>

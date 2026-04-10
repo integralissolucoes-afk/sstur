@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Agendamentos</title>
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+  <header>
+  <div><strong>Sistema de Transporte</strong></div>
+  <nav>
+    <a href="index.html">Dashboard</a>
+    <a href="clientes.html">Clientes</a>
+    <a href="veiculos.html">Veículos</a>
+    <a href="agendamentos.html">Agendamentos</a>
+    <a href="contratos.html">Contratos</a>
+    <a href="config.html">Contrato padrão</a>
+    <a href="#" onclick="logout()">Sair</a>
+  </nav>
+</header>
+  <div class="container">
+    <div class="card">
+      <h1>Novo agendamento</h1>
+      <form id="agendamentoForm" class="grid grid-2">
+        <div><label>Cliente</label><select id="cliente_id" required></select></div>
+        <div><label>Veículo</label><select id="veiculo_id" required></select></div>
+        <div><label>Data da saída</label><input id="data_saida" type="date" required /></div>
+        <div><label>Hora da saída</label><input id="hora_saida" type="time" required /></div>
+        <div><label>Local da saída</label><input id="local_saida" required /></div>
+        <div><label>Destino</label><input id="destino" required /></div>
+        <div><label>Data do retorno</label><input id="data_retorno" type="date" /></div>
+        <div><label>Hora do retorno</label><input id="hora_retorno" type="time" /></div>
+        <div><label>Local do retorno</label><input id="local_retorno" /></div>
+        <div><label>Passageiros</label><input id="quantidade_passageiros" type="number" required /></div>
+        <div><label>Valor</label><input id="valor" type="number" step="0.01" required /></div>
+        <div><label>Forma de pagamento</label><input id="forma_pagamento" /></div>
+        <div>
+          <label>Status</label>
+          <select id="status">
+            <option value="orcamento">Orçamento</option>
+            <option value="reservado">Reservado</option>
+            <option value="confirmado">Confirmado</option>
+            <option value="concluido">Concluído</option>
+            <option value="cancelado">Cancelado</option>
+          </select>
+        </div>
+        <div style="grid-column: 1 / -1;"><label>Observações</label><textarea id="observacoes"></textarea></div>
+        <div><button type="submit">Salvar agendamento</button></div>
+      </form>
+    </div>
+
+    <div class="card">
+      <h2>Lista de agendamentos</h2>
+      <table>
+        <thead>
+          <tr>
+            <th>Cliente</th>
+            <th>Veículo</th>
+            <th>Saída</th>
+            <th>Destino</th>
+            <th>Passageiros</th>
+            <th>Valor</th>
+            <th>Status</th>
+          </tr>
+        </thead>
+        <tbody id="tbAgendamentos"></tbody>
+      </table>
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="js/supabase.js"></script>
+  <script src="js/auth.js"></script>
+  <script src="js/agendamentos.js"></script>
+</body>
+</html>
