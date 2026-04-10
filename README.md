@@ -3,7 +3,7 @@
 Base inicial para gestão interna de empresa de ônibus.
 
 ## Antes de usar
-1. Crie um projeto no Supabase
+1. Crie um projeto no Supabase.
 2. Rode o arquivo `supabase_schema.sql`
 3. Crie um usuário em Authentication > Users
 4. Edite `js/supabase.js` e coloque sua URL e sua anon key
