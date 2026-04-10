@@ -10,7 +10,6 @@ async function carregarModelo() {
   const { data, error } = await supabaseClient
     .from('modelos_contrato')
     .select('*')
-    .eq('ativo', true)
     .order('id', { ascending: false })
     .limit(1)
     .single();
